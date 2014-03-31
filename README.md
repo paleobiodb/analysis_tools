@@ -34,11 +34,19 @@ Simply submit a pull request to this repo following the instructions below:
 ## Scripts
 If you would like to add your script to this list, please refer to [submitting a script](#submissions) above. As more scripts are added, it may become necessary to organize by language or purpose.
  
- ======
-#### rOpenSci 
-R interface to the Paleobiology Database API. Please visit the [main website](http://ropensci.org) for more information. The code for the package can be found [on Github](https://github.com/ropensci/paleobioDB).
+=========
+### rOpenSci 
+**Description**:  R interface to the Paleobiology Database API   
+**Language**: R  
+**Authors**: Sara Varela, Javier Gonzalez-Hernandez and Luciano Fabris Sgarbi   
+**Project website**: http://ropensci.org   
+**Code**: https://github.com/ropensci/paleobioDB   
 
 #### Matthew Clapham's PBDB R scripts
-Includes a script to calculate the maximum great circle distance between any two occurrences of a taxon in a time interval. Can be found [on Github](https://github.com/mclapham/PBDB-R-scripts).
+**Description**:  Various R scripts that utilize the Paleobiology Database, including one to calculate the maximum great circle distance between any two occurrences of a taxon in a time interval   
+**Language**: R  
+**Author**: Matthew Clapham  
+**Code**: https://github.com/mclapham/PBDB-R-scripts
+
 
 
