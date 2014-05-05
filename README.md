@@ -11,7 +11,12 @@ A directory of scripts that utilize the Paleobiology Database
 
 <a name="intro"></a>
 ## Getting started
-Instructions for creating a repo and adding it to Github go here
+If you are unfamiliar with using Git for version control, these are some good resources to get you started:
+
+- [Pro Git](http://git-scm.com/book) by Scott Chacon
+- [Think Like (a) Git](http://think-like-a-git.net/)
+- [Git cheatsheet](http://cheat.errtheblog.com/s/git)
+- [LearnGitBranching](http://pcottle.github.io/learnGitBranching/) - An interactive way to learn Git
 
 <a name="submissions"></a>
 ## Submitting a script
