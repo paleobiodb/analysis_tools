@@ -8,7 +8,7 @@
 #' @param IgnoreSingletons A logical
 #' @param ExcludeDominant A logical
 #'
-#' @return A numeric value of estimated richness
+#' @return A numeric value of estimated taxonomic richness
 #'
 #' @author Andrew A. Zaffos
 #'

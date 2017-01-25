@@ -29,7 +29,7 @@
 #'	# Calculate the standardized richness of each plate assuming a fixed sample size of 100 occurrences
 #'	StandardizedRichness<-apply(CommunityCull,1,subsampleIndividuals,100)
 #'
-#'	@rdname subsampleEvenness
+#'	@rdname subsampleIndividuals
 #'	@export
 # A function for resampling by a fixed number of individuals
 subsampleIndividuals<-function(Abundance,Quota,Trials=100) {
