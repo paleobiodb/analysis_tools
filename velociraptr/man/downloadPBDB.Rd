@@ -38,8 +38,8 @@ Downloads a data frame of Paleobiology Database fossil occurrences matching cert
 # Download a test dataset of Maastrichtian bivalves.
 DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Maastrichtian",StopInterval="Maastrichtian")
 
- # Download a test dataset of Ordovician-Silurian trilobites, brachiopods, and crinoids.
- DataPBDB<-downloadPBDB(Taxa=c("Trilobita","Brachiopoda","Crinoidea"),StartInterval="Ordovician",StopInterval="Silurian")
+ # Download a test dataset of Ordovician-Silurian trilobites and brachiopods.
+ DataPBDB<-downloadPBDB(Taxa=c("Trilobita","Brachiopoda"),StartInterval="Ordovician",StopInterval="Silurian")
 
 }
 \author{

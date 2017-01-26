@@ -147,7 +147,7 @@ adaptiveExtinction<-function(Ages,Confidence=0.95) {
 
   # Return the results as a matrix
   FinalMatrix <- t(data.matrix(c(MaxAge, Theta, UpperCI)))
-  colnames(FinalMatrix) <- c("Observed Age Age","Expected Value","Confidence Limit")
+  colnames(FinalMatrix) <- c("Observed Age","Expected Value","Confidence Limit")
   return(FinalMatrix)
   }
 
