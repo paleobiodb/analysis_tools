@@ -3,7 +3,6 @@ R Functions for downloading, cleaning, culling, or analyzing fossil data from th
 
 The following is a list of functions included in the package and basic descriptions of what they do. See the internal help files for further information on usage - e.g., ````?downloadPBDB````.
 
-# Contents
 ## Installation
 For RStudio users, the best way to install this package directly from GitHub is by using the `devtools` package.
 
@@ -11,6 +10,7 @@ For RStudio users, the best way to install this package directly from GitHub is 
 devtools::install_github("paleobiodb/paleobiodb_utilities",subdir="velociraptr")
 ````
 
+# Contents
 ## Download Functions
 + [````downloadPBDB( )````](#downloadpbdb-)
 + [````downloadTime( )````](#downloadtime-)
