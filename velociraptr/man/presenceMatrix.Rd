@@ -22,13 +22,14 @@ Creates a community matrix of taxon presences and absences from a data frame wit
 \examples{
 
 # Download a test dataset of pleistocene bivalves.
-DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Pleistocene",StopInterval="Pleistocene")
+# DataPBDB<-downloadPBDB(Taxa="Bivalvia","Pleistocene","Pleistocene")
 
 # Create a community matrix of genera by plates.
-CommunityMatrix<-presenceMatrix(DataPBDB,Rows="geoplate",Columns="genus")
+# CommunityMatrix<-presenceMatrix(DataPBDB,Rows="geoplate",Columns="genus")
 
 # Create a community matrix of families by geologic interval.
-CommunityMatrix<-presenceMatrix(DataPBDB,Rows="early_interval",Columns="family")
+# CommunityMatrix<-presenceMatrix(DataPBDB,Rows="early_interval",Columns="family")
+
 }
 \author{
 Andrew A. Zaffos

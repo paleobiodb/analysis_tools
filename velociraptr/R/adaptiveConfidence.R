@@ -55,8 +55,8 @@ adaptiveOrigination<-function(Ages,Confidence=0.95) {
     # increment lambda values, integrating over theta values for each
     for(i in 1:length(LambdaValues))  {
       LambdaDensity[i] <- ifelse(LambdaValues[i]<=0,
-        integrate(lambdaNegative, MaxAge,500, Lambda=LambdaValues[i],Ages)$value,
-        integrate(lambdaPositive, MaxAge,500, Lambda=LambdaValues[i],Ages)$value
+        stats::integrate(lambdaNegative, MaxAge,500, Lambda=LambdaValues[i],Ages)$value,
+        stats::integrate(lambdaPositive, MaxAge,500, Lambda=LambdaValues[i],Ages)$value
         )
       }
     # Normalize lambda pdf to unit area
@@ -65,7 +65,7 @@ adaptiveOrigination<-function(Ages,Confidence=0.95) {
 
     # increment theta values, integrating over lambda values for each
     for(i in 1:length(ThetaValues))  {
-      ThetaDensity[i] <- (integrate(thetaNegative, -Inf,0, Theta=ThetaValues[i], Ages)$value + integrate(thetaPositive, 0,Inf, Theta=ThetaValues[i], Ages)$value)
+      ThetaDensity[i] <- (stats::integrate(thetaNegative, -Inf,0, Theta=ThetaValues[i], Ages)$value + stats::integrate(thetaPositive, 0,Inf, Theta=ThetaValues[i], Ages)$value)
       }
     # normalize theta pdf to unit area
     ThetaDensity <- ThetaDensity/sum(ThetaDensity)
@@ -118,8 +118,8 @@ adaptiveExtinction<-function(Ages,Confidence=0.95) {
     # increment lambda values, integrating over theta values for each
     for(i in 1:length(LambdaValues))  {
       LambdaDensity[i] <- ifelse(LambdaValues[i]<=0,
-        integrate(lambdaNegative, MaxAge,500, Lambda=LambdaValues[i],Ages)$value,
-        integrate(lambdaPositive, MaxAge,500, Lambda=LambdaValues[i],Ages)$value
+        stats::integrate(lambdaNegative, MaxAge,500, Lambda=LambdaValues[i],Ages)$value,
+        stats::integrate(lambdaPositive, MaxAge,500, Lambda=LambdaValues[i],Ages)$value
         )
       }
     # Normalize lambda pdf to unit area
@@ -128,7 +128,7 @@ adaptiveExtinction<-function(Ages,Confidence=0.95) {
 
     # increment theta values, integrating over lambda values for each
     for(i in 1:length(ThetaValues))  {
-      ThetaDensity[i] <- (integrate(thetaNegative, -Inf,0, Theta=ThetaValues[i], Ages)$value + integrate(thetaPositive, 0,Inf, Theta=ThetaValues[i], Ages)$value)
+      ThetaDensity[i] <- (stats::integrate(thetaNegative, -Inf,0, Theta=ThetaValues[i], Ages)$value + stats::integrate(thetaPositive, 0,Inf, Theta=ThetaValues[i], Ages)$value)
       }
     # normalize theta pdf to unit area
     ThetaDensity <- ThetaDensity/sum(ThetaDensity)
@@ -158,7 +158,7 @@ thetaNegative <- function(Lambda,Theta,Ages)  {
   for(i in 1:length(Lambda)) {
     FinalVector[i]<-(sum(log((1-Lambda[i])/Theta * 1/(1-Ages/Theta)^Lambda[i])))
     }
-  FinalVector<-FinalVector+dnorm(Lambda,0,2,log=TRUE) + log(1/Theta) # Mean and sd are hard-coded by Wang et al. 2015
+  FinalVector<-FinalVector + stats::dnorm(Lambda,0,2,log=TRUE) + log(1/Theta) # Mean and sd are hard-coded by Wang et al. 2015
   return(exp(FinalVector))
   }
 
@@ -167,7 +167,7 @@ thetaPositive <- function(Lambda,Theta,Ages)  {
   for(i in 1:length(Lambda)) {
     FinalVector[i] <- (sum(log((1+Lambda[i])/Theta*(Ages/Theta)^Lambda[i])))
     }
-  FinalVector<-FinalVector + dnorm(Lambda, 0,2, log=TRUE) + log(1/Theta) # Mean and sd are hard-coded by Wang et al. 2015
+  FinalVector<-FinalVector + stats::dnorm(Lambda, 0,2, log=TRUE) + log(1/Theta) # Mean and sd are hard-coded by Wang et al. 2015
   return(exp(FinalVector))
   }
 
@@ -176,7 +176,7 @@ lambdaNegative <- function(Theta,Lambda,Ages)  {
   for(i in 1:length(Theta)) {
     FinalVector[i] <- (sum(log((1-Lambda)/Theta[i] * 1/(1-Ages/Theta[i])^Lambda)))
     }
-  FinalVector <- FinalVector + dnorm(Lambda, 0,2, log=TRUE) + log(1/Theta)
+  FinalVector <- FinalVector + stats::dnorm(Lambda, 0,2, log=TRUE) + log(1/Theta)
   return(exp(FinalVector))
   }
 
@@ -185,6 +185,6 @@ lambdaPositive <- function(Theta,Lambda,Ages)  {
   for(i in 1:length(Theta)) {
     FinalVector[i]<-(sum(log((1+Lambda)/Theta[i] * (Ages/Theta[i])^Lambda)))
     }
-  FinalVector<-FinalVector + dnorm(Lambda, 0,2, log=TRUE) + log(1/Theta)
+  FinalVector<-FinalVector + stats::dnorm(Lambda, 0,2, log=TRUE) + log(1/Theta)
   return(exp(FinalVector))
   }

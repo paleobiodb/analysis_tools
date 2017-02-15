@@ -46,19 +46,20 @@ Takes a community matrix (see \code{presenceMatrix} or \code{abundanceMatrix}) a
 }
 \examples{
 # Download a test dataset of pleistocene bivalves.
-DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Pleistocene",StopInterval="Pleistocene")
+# DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Pleistocene",StopInterval="Pleistocene")
 
 # Create a community matrix with tectonic plates as "samples"
-CommunityMatrix<-abundanceMatrix(DataPBDB,"geoplate")
+# CommunityMatrix<-abundanceMatrix(DataPBDB,"geoplate")
 
 # Calculate the average richness of all samples in a community.
-meanAlpha(CommunityMatrix)
+# meanAlpha(CommunityMatrix)
 
 # The beta diversity of all samples in a community.
-totalBeta(CommunityMatrix)
+# totalBeta(CommunityMatrix)
 
 # This is, by definition, equivalent to the gamma diversity - mean alpha diversity.
-totalBeta(CommunityMatrix)==(totalGamma(CommunityMatrix)-meanAlpha(CommunityMatrix))
+# totalBeta(CommunityMatrix)==(totalGamma(CommunityMatrix)-meanAlpha(CommunityMatrix))
+
 }
 \author{
 Andrew A. Zaffos

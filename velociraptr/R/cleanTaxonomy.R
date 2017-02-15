@@ -14,10 +14,10 @@
 #' @examples
 #'
 #'	# Download a test dataset of Cenozoic bivalves.
-#'	DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Cenozoic",StopInterval="Cenozoic")
+#'	# DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Cenozoic",StopInterval="Cenozoic")
 #'
 #'	# Clean up the genus column.
-#'	CleanedPBDB<-cleanTaxonomy(DataPBDB,"genus")
+#'	# CleanedPBDB<-cleanTaxonomy(DataPBDB,"genus")
 #'
 #'	@rdname cleanTaxonomy
 #'	@export

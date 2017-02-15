@@ -19,19 +19,19 @@
 #' @examples
 #'
 #'	# Download a test dataset of Miocene-Pleistocene bivalves.
-#'	DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Miocene",StopInterval="Pleistocene")
+#'	# DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Miocene",StopInterval="Pleistocene")
 #'
 #'  # Clean up the taxonomy by removing subgenus designation
-#'  DataPBDB<-cleanTaxonomy(DataPBDB,"genus")
+#'  # DataPBDB<-cleanTaxonomy(DataPBDB,"genus")
 #'
 #'	# Create a community matrix of genera by tectonic plate ids.
-#'	CommunityMatrix<-abundanceMatrix(DataPBDB,Rows="geoplate",Columns="genus")
+#'	# CommunityMatrix<-abundanceMatrix(DataPBDB,Rows="geoplate",Columns="genus")
 #'
 #'	# Cull out depauperate samples and rare taxa
-#'	CommunityCull<-cullMatrix(CommunityMatrix,5,100)
+#'	# CommunityCull<-cullMatrix(CommunityMatrix,5,100)
 #'
 #'	# Calculate the standardized richness of each plate at a quota of 0.5.
-#'	StandardizedRichness<-apply(CommunityCull,1,subsampleEvenness,0.5)
+#'	# StandardizedRichness<-apply(CommunityCull,1,subsampleEvenness,0.5)
 #'
 #'	@rdname subsampleEvenness
 #'	@export
@@ -95,7 +95,7 @@ subsampleEvenness<-function(Abundance,Quota=0.9,Trials=100,IgnoreSingletons=FALS
 				Seen[DrawnTaxon]<-1
  				# increment the richness if the Quota hasn't been exceeded,
 				# and randomly throw back some draws that put the coverage over Quota
-				if (Coverage<Quota || runif(1)<=Frequency[DrawnTaxon]) {
+				if (Coverage<Quota || stats::runif(1)<=Frequency[DrawnTaxon]) {
 					Richness[Trial]<-Richness[Trial]+1
 					}
 				else {

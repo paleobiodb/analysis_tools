@@ -16,16 +16,16 @@
 #' @examples
 #'
 #'	# Download a test dataset of Cenozoic bivalves.
-#'	DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Cenozoic",StopInterval="Cenozoic")
+#'	# DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Cenozoic",StopInterval="Cenozoic")
 #'
 #'  # Download the international epochs timescale from macrostrat.org
-#'	Epochs<-downloadTime("international epochs")
+#'	# Epochs<-downloadTime("international epochs")
 #'
 #'	# Find only occurrences that are temporally constrained to a single international epoch
-#'	ConstrainedPBDB<-constrainAges(DataPBDB,Epochs)
+#'	# ConstrainedPBDB<-constrainAges(DataPBDB,Timescale=Epochs)
 #'
 #'  # Create mutliple instances of a single occurrence for each epoch it occurs in
-#'  MultipliedPBDB<-multiplyAges(DataPBDB,Epochs)
+#'  # MultipliedPBDB<-multiplyAges(DataPBDB,Timescale=Epochs)
 #'
 #'	@rdname constrainAges
 #'	@export
@@ -45,7 +45,7 @@ constrainAges<-function(Data,Timescale) {
 #'	@export
 # A variant of constrain ages that allows for multiple ages
 # Assign fossil occurrences to multiple ages
-multiplyAges<-function(Data,Timescale=Epochs) {
+multiplyAges<-function(Data,Timescale) {
   Data[,"early_interval"]<-as.character(Data[,"early_interval"])
   Data[,"late_interval"]<-as.character(Data[,"late_interval"])
 	for (i in 1:nrow(Timescale)) {

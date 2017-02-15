@@ -10,24 +10,24 @@
 #'
 #' @author Andrew A. Zaffos
 #'
-#' @details
+#' @details This is an empirical approach to subsampling a vector of taxonomic abundances to a set number of abundances. It uses a bootstrapping approach rather than the more common analytical solution provided in other packages.
 #'
 #' @examples
 #'
 #'	# Download a test dataset of Miocene-Pleistocene bivalves
-#'	DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Miocene",StopInterval="Pleistocene")
+#'	# DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Miocene",StopInterval="Pleistocene")
 #'
 #'  # Clean up the taxonomy by removing subgenus designation
-#'  DataPBDB<-cleanTaxonomy(DataPBDB,"genus")
+#'  # DataPBDB<-cleanTaxonomy(DataPBDB,"genus")
 #'
 #'	# Create a community matrix of genera by tectonic plate ids
-#'	CommunityMatrix<-abundanceMatrix(DataPBDB,Rows="geoplate",Columns="genus")
+#'	# CommunityMatrix<-abundanceMatrix(DataPBDB,Rows="geoplate",Columns="genus")
 #'
 #'	# Cull out depauperate samples and rare taxa
-#'	CommunityCull<-cullMatrix(CommunityMatrix,5,100)
+#'	# CommunityCull<-cullMatrix(CommunityMatrix,5,100)
 #'
 #'	# Calculate the standardized richness of each plate assuming a fixed sample size of 100 occurrences
-#'	StandardizedRichness<-apply(CommunityCull,1,subsampleIndividuals,100)
+#'	# StandardizedRichness<-apply(CommunityCull,1,subsampleIndividuals,100)
 #'
 #'	@rdname subsampleIndividuals
 #'	@export

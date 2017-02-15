@@ -36,7 +36,7 @@ uniformExtinction <- function(Ages, Confidence=0.95)  {
     Alpha<-((1-Confidence)^(-1/NumOccurrences))-1
     Lower<-min(Ages)
     Upper<-min(Ages)-(Alpha*10)
-    return(setNames(c(Lower,Upper),c("Earliest","Latest")))
+    return(stats::setNames(c(Lower,Upper),c("Earliest","Latest")))
     }
 
 #' @rdname uniformConfidence
@@ -47,5 +47,5 @@ uniformOrigination <- function(Ages, Confidence=0.95)  {
   Alpha<-((1-Confidence)^(-1/NumOccurrences))-1
   Latest<-max(Ages)
   Earliest<-max(Ages)+(Alpha*10)
-  return(setNames(c(Earliest,Latest),c("Earliest","Latest")))
+  return(stats::setNames(c(Earliest,Latest),c("Earliest","Latest")))
   }

@@ -23,10 +23,10 @@ Find the age range (first occurrence and last occurrence) for each taxon in a PB
 \examples{
 
 # Download a test dataset of Cenozoic bivalves.
-DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Cenozoic",StopInterval="Cenozoic")
+# DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Cenozoic",StopInterval="Cenozoic")
 
 # Find the first occurrence and last occurrence for all Cenozoic bivalves in DataPBDB
-AgeRanges<-ageRanges(DataPBDB,"genus")
+# AgeRanges<-ageRanges(DataPBDB,"genus")
 
 }
 \author{

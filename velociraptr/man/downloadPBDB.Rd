@@ -35,11 +35,11 @@ Downloads a data frame of Paleobiology Database fossil occurrences matching cert
 }
 \examples{
 
-# Download a test dataset of Maastrichtian bivalves.
-DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Maastrichtian",StopInterval="Maastrichtian")
+# Download a test dataset of Ypresian bivalves.
+# DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Ypresian",StopInterval="Ypresian")
 
  # Download a test dataset of Ordovician-Silurian trilobites and brachiopods.
- DataPBDB<-downloadPBDB(Taxa=c("Trilobita","Brachiopoda"),StartInterval="Ordovician",StopInterval="Silurian")
+ # DataPBDB<-downloadPBDB(c("Trilobita","Brachiopoda"),"Ordovician","Silurian")
 
 }
 \author{

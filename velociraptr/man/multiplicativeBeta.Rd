@@ -32,19 +32,19 @@ Takes a community matrix (see \code{presenceMatrix} or \code{abundanceMatrix}) a
 }
 \examples{
 # Download a test dataset of pleistocene bivalves from the Paleobiology Database.
-DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Pleistocene",StopInterval="Pleistocene")
+# DataPBDB<-downloadPBDB(Taxa="Bivalvia","Pleistocene","Pleistocene")
 
 # Create a community matrix with tectonic plates as "samples".
-CommunityMatrix<-abundanceMatrix(DataPBDB,"geoplate")
+# CommunityMatrix<-abundanceMatrix(DataPBDB,"geoplate")
 
 # "True local diversity ratio"
-multiplicativeBeta(CommunityMatrix)
+# multiplicativeBeta(CommunityMatrix)
 
 # Whittaker's effective species turnover
-completeTurnovers(CommunityMatrix)
+# completeTurnovers(CommunityMatrix)
 
 # Proportional effective species turnover
-notEndemic(CommunityMatrix)
+# notEndemic(CommunityMatrix)
 
 }
 \author{
