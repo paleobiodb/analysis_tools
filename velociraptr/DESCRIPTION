@@ -4,7 +4,7 @@ Title: Fossil Analysis
 Version: 1.0
 Author: Andrew A. Zaffos
 Maintainer: Andrew A Zaffos <azaffos@wisc.edu>
-Description: Functions for downloading, reshaping, culling, cleaning, and analyzing fossil data from the Paleobiology Database.
+Description: Functions for downloading, reshaping, culling, cleaning, and analyzing fossil data from the Paleobiology Database <https://paleobiodb.org>.
 License: GPL-3
 Encoding: UTF-8
 Depends: rgdal,RCurl
