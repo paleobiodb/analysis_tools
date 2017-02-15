@@ -10,6 +10,9 @@
 #'
 #' @return An rgdal compatible shapefile
 #'
+#' @import RCurl
+#' @import rgdal
+#'
 #' @examples
 #'
 #'	# Download a test dataset of Maastrichtian bivalves.
