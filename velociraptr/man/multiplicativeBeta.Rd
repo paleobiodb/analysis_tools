@@ -23,7 +23,10 @@ A numeric vector
 Calculates beta diversity under various Multiplicative Diversity Partitioning paradigms.
 }
 \details{
-Takes a community matrix (see \code{presenceMatrix} or \code{abundanceMatrix}) and returns one of three types of multiplicative beta diversity discussed in Tuomisto, H (2010) "A diversity of beta diversities: straightening up a concept gone awry. Part 1. Defining beta diversity as a function of alpha and gamma diversity". \emph{Ecography} 33:2-22.
+Takes a community matrix (see \code{presenceMatrix} or \code{abundanceMatrix}) and returns one of three types of multiplicative beta diversity.
+
+Refer to Tuomisto, H (2010) "A diversity of beta diversities: straightening up a concept gone awry. Part 1. Defining beta diversity as a function of alpha and gamma diversity". \emph{Ecography} 33:2-22.
+
 \itemize{
  \item{\code{multiplicativeBeta(CommunityMatrix):}} {Calculates the original beta diversity ratio - Gamma/Alpha. It quantifies how many times as rich gamma is than alpha.}
  \item{\code{completeTurnovers(CommunityMatrix):}} {The number of complete effective species turnovers observed among compositonal units in the dataset - (Gamma-Alpha)/Alpha.}

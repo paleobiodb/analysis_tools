@@ -32,7 +32,10 @@ A vector of the alpha, beta, or gamma richness of a taxon, sample, or entire com
 Functions for calculating alpha, beta, and gamma richness of a community matrix under the Additive Diversity partitioning paradigm of R. Lande.
 }
 \details{
-Takes a community matrix (see \code{presenceMatrix} or \code{abundanceMatrix}) and returns the either the alpha, beta, or gamma richness of a community matrix. Some of these functions were presented in Holland, SM (2010) "Additive diversity partitioning in palaeobiology: revisiting Sepkoski’s question" \emph{Paleontology} 53:1237-1254. Namely, \code{taxonAlpha}, \code{taxonBeta}, \code{sampleBeta}, \code{meanAlpha}, \code{totalBeta}, and \code{totalGamma}.
+Takes a community matrix (see \code{presenceMatrix} or \code{abundanceMatrix}) and returns the either the alpha, beta, or gamma richness of a community matrix.
+
+These functions were originally presented in Holland, SM (2010) "Additive diversity partitioning in palaeobiology: revisiting Sepkoski’s question" \emph{Paleontology} 53:1237-1254.
+
 \itemize{
  \item{\code{taxonAlpha(CommunityMatrix)}} {Calculates the contribution to alpha diversity of each taxon.}
  \item{\code{meanAlpha(CommunityMatrix)}} {Calculates the average alpha diversity of all samples.}

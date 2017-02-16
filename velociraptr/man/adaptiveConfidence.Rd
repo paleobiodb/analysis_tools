@@ -23,8 +23,10 @@ Functions for placing confidence intervals on time of orignation or extinction u
 }
 \details{
 Takes a numeric vector of fossil occurrence ages, expressed as millions of years ago, to estimate either the time of origination \code{adaptiveOrigination} or extinction \code{adaptiveExtinction}.
-This code was originally presented in Wang et al. (2015) "Adaptive credible intervals on stratigraphic ranges when recovery potential is unknown". \emph{Paleobiology} 42:240256. This simplified version
- will only accept ages in millions of years. The full version can be found in the online supplement to the paper.
+
+This code was originally presented in Wang et al. (2015) "Adaptive credible intervals on stratigraphic ranges when recovery potential is unknown". \emph{Paleobiology} 42:240-256.
+
+This simplified version will only accept ages in millions of years. The full version can be found in the online supplement to the paper.
 
 Note that this function will not accept more than 161 age observations. This is a limitation of the original function.
 }
