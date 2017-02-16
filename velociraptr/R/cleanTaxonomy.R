@@ -3,7 +3,7 @@
 #' Removes NAs and subgenera from the genus column.
 #'
 #' @param Data A data frame of taxonomic ocurrences downloaded from the paleobiology database API.
-#' @param Taxonomy A characer string
+#' @param Taxonomy A character string
 #'
 #' @details Will remove NA's and subgenera from the genus column of a PBDB dataset. It can also be used on other datasets of similar structure to convert species names to genus, or remove NAs.
 #'
