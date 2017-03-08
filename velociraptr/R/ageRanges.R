@@ -13,14 +13,14 @@
 #'
 #' @examples
 #'
-#'	# Download a test dataset of Cenozoic bivalves.
-#'	# DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Cenozoic",StopInterval="Cenozoic")
+#' # Download a test dataset of Cenozoic bivalves.
+#' # DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Cenozoic",StopInterval="Cenozoic")
 #'
-#'	# Find the first occurrence and last occurrence for all Cenozoic bivalves in DataPBDB
-#'	# AgeRanges<-ageRanges(DataPBDB,"genus")
+#' # Find the first occurrence and last occurrence for all Cenozoic bivalves in DataPBDB
+#' # AgeRanges<-ageRanges(DataPBDB,"genus")
 #'
-#'	@rdname ageRanges
-#'	@export
+#' @rdname ageRanges
+#' @export
 # Find the min and max age range of a taxonomic ranking - e.g., genus.
 ageRanges<-function(Data,Taxonomy="genus") {
 	Data<-subset(Data,is.na(Data[,Taxonomy])!=TRUE) # Remove NA's

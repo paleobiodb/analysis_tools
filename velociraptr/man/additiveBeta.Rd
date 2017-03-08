@@ -37,15 +37,15 @@ Takes a community matrix (see \code{presenceMatrix} or \code{abundanceMatrix}) a
 These functions were originally presented in Holland, SM (2010) "Additive diversity partitioning in palaeobiology: revisiting Sepkoski’s question" \emph{Paleontology} 53:1237-1254.
 
 \itemize{
- \item{\code{taxonAlpha(CommunityMatrix)}} {Calculates the contribution to alpha diversity of each taxon.}
- \item{\code{meanAlpha(CommunityMatrix)}} {Calculates the average alpha diversity of all samples.}
+\item{\code{taxonAlpha(CommunityMatrix)}} {Calculates the contribution to alpha diversity of each taxon.}
+\item{\code{meanAlpha(CommunityMatrix)}} {Calculates the average alpha diversity of all samples.}
 
- \item{\code{taxonBeta(CommunityMatrix)}} {Calculates the contribution to beta diversity of each taxon.}
- \item{\code{sampleBeta(CommunityMatrix)}} {Calculates the contribution to beta diversity of each sample.}
- \item{\code{totalBeta(CommunityMatrix)}} {Calculates the total beta diversity.}
+\item{\code{taxonBeta(CommunityMatrix)}} {Calculates the contribution to beta diversity of each taxon.}
+\item{\code{sampleBeta(CommunityMatrix)}} {Calculates the contribution to beta diversity of each sample.}
+\item{\code{totalBeta(CommunityMatrix)}} {Calculates the total beta diversity.}
 
- \item{\code{totalGamma(CommunityMatrix)}} {Calculates the richness of all samples in the community matrix.}
-}
+\item{\code{totalGamma(CommunityMatrix)}} {Calculates the richness of all samples in the community matrix.}
+ }
 }
 \examples{
 # Download a test dataset of pleistocene bivalves.

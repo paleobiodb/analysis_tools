@@ -12,17 +12,17 @@
 #'
 #' @examples
 #'
-#'	# Download a test dataset of pleistocene bivalves.
-#'	# DataPBDB<-downloadPBDB(Taxa="Bivalvia","Pleistocene","Pleistocene")
+#' # Download a test dataset of pleistocene bivalves.
+#' # DataPBDB<-downloadPBDB(Taxa="Bivalvia","Pleistocene","Pleistocene")
 #'
-#'	# Create a community matrix of genera by plates.
-#'	# CommunityMatrix<-presenceMatrix(DataPBDB,Rows="geoplate",Columns="genus")
+#' # Create a community matrix of genera by plates.
+#' # CommunityMatrix<-presenceMatrix(DataPBDB,Rows="geoplate",Columns="genus")
 #'
-#'	# Create a community matrix of families by geologic interval.
-#'	# CommunityMatrix<-presenceMatrix(DataPBDB,Rows="early_interval",Columns="family")
+#' # Create a community matrix of families by geologic interval.
+#' # CommunityMatrix<-presenceMatrix(DataPBDB,Rows="early_interval",Columns="family")
 #'
-#'	@rdname presenceMatrix
-#'	@export
+#' @rdname presenceMatrix
+#' @export
 presenceMatrix<-function(Data,Rows="geoplate",Columns="genus") {
 	FinalMatrix<-matrix(0,nrow=length(unique(Data[,Rows])),ncol=length(unique(Data[,Columns])))
 	rownames(FinalMatrix)<-unique(Data[,Rows])

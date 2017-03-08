@@ -13,14 +13,14 @@
 #'
 #' @examples
 #'
-#'	# Download a test dataset of Cenozoic bivalves.
-#'	# DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Cenozoic",StopInterval="Cenozoic")
+#' # Download a test dataset of Cenozoic bivalves.
+#' # DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Cenozoic",StopInterval="Cenozoic")
 #'
-#'	# Clean up the genus column.
-#'	# CleanedPBDB<-cleanTaxonomy(DataPBDB,"genus")
+#' # Clean up the genus column.
+#' # CleanedPBDB<-cleanTaxonomy(DataPBDB,"genus")
 #'
-#'	@rdname cleanTaxonomy
-#'	@export
+#' @rdname cleanTaxonomy
+#' @export
 # Find the min and max age range of a taxonomic ranking - e.g., genus.
 cleanTaxonomy<-function(Data,Taxonomy="genus") {
 	Data<-subset(Data,Data[,Taxonomy]!="") # Remove NAs

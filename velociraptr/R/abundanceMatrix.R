@@ -12,17 +12,17 @@
 #'
 #' @examples
 #'
-#'	# Download a test dataset of pleistocene bivalves.
-#'	# DataPBDB<-downloadPBDB(Taxa="Bivalvia", StartInterval="Pleistocene", StopInterval="Pleistocene")
+#' # Download a test dataset of pleistocene bivalves.
+#' # DataPBDB<-downloadPBDB(Taxa="Bivalvia", StartInterval="Pleistocene", StopInterval="Pleistocene")
 #'
-#'	# Clean the genus column
-#'	# DataPBDB<-cleanTaxonomy(DataPBDB,"genus")
+#' # Clean the genus column
+#' # DataPBDB<-cleanTaxonomy(DataPBDB,"genus")
 #'
-#'	# Create a community matrix of genera by tectonic plate id#
-#'	# CommunityMatrix<-abundanceMatrix(Data=DataPBDB, Rows="geoplate", Columns="genus")
+#' # Create a community matrix of genera by tectonic plate id#
+#' # CommunityMatrix<-abundanceMatrix(Data=DataPBDB, Rows="geoplate", Columns="genus")
 #'
-#'	@rdname abundanceMatrix
-#'	@export
+#' @rdname abundanceMatrix
+#' @export
 abundanceMatrix<-function(Data,Rows="geoplate",Columns="genus") {
 	Data[,Columns]<-as.factor(Data[,Columns]) # Get rid of gross hanging factors
 	SamplesAbundances<-by(Data,Data[,Rows],function(x) table(x[,Columns]))

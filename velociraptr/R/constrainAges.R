@@ -15,20 +15,20 @@
 #'
 #' @examples
 #'
-#'	# Download a test dataset of Cenozoic bivalves.
-#'	# DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Cenozoic",StopInterval="Cenozoic")
+#' # Download a test dataset of Cenozoic bivalves.
+#' # DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Cenozoic",StopInterval="Cenozoic")
 #'
-#'  # Download the international epochs timescale from macrostrat.org
-#'	# Epochs<-downloadTime("international epochs")
+#' # Download the international epochs timescale from macrostrat.org
+#' # Epochs<-downloadTime("international epochs")
 #'
-#'	# Find only occurrences that are temporally constrained to a single international epoch
-#'	# ConstrainedPBDB<-constrainAges(DataPBDB,Timescale=Epochs)
+#' # Find only occurrences that are temporally constrained to a single international epoch
+#' # ConstrainedPBDB<-constrainAges(DataPBDB,Timescale=Epochs)
 #'
-#'  # Create mutliple instances of a single occurrence for each epoch it occurs in
-#'  # MultipliedPBDB<-multiplyAges(DataPBDB,Timescale=Epochs)
+#' # Create mutliple instances of a single occurrence for each epoch it occurs in
+#' # MultipliedPBDB<-multiplyAges(DataPBDB,Timescale=Epochs)
 #'
-#'	@rdname constrainAges
-#'	@export
+#' @rdname constrainAges
+#' @export
 constrainAges<-function(Data,Timescale) {
 	Data[,"early_interval"]<-as.character(Data[,"early_interval"])
 	Data[,"late_interval"]<-as.character(Data[,"late_interval"])

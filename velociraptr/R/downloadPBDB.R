@@ -25,14 +25,14 @@
 #'
 #' @examples
 #'
-#'	# Download a test dataset of Ypresian bivalves.
-#'	# DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Ypresian",StopInterval="Ypresian")
+#' # Download a test dataset of Ypresian bivalves.
+#' # DataPBDB<-downloadPBDB(Taxa="Bivalvia",StartInterval="Ypresian",StopInterval="Ypresian")
 #'
-#'  # Download a test dataset of Ordovician-Silurian trilobites and brachiopods.
-#'  # DataPBDB<-downloadPBDB(c("Trilobita","Brachiopoda"),"Ordovician","Silurian")
+#' # Download a test dataset of Ordovician-Silurian trilobites and brachiopods.
+#' # DataPBDB<-downloadPBDB(c("Trilobita","Brachiopoda"),"Ordovician","Silurian")
 #'
-#'	@rdname downloadPBDB
-#'	@export
+#' @rdname downloadPBDB
+#' @export
 # A function for downloading data from the Paleobiology database
 downloadPBDB<-function(Taxa,StartInterval="Pliocene",StopInterval="Pleistocene") {
 	Taxa<-paste(Taxa,collapse=",")

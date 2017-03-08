@@ -21,23 +21,23 @@
 #' @author Andrew A. Zaffos
 #'
 #' @examples
-#'	# Download a test dataset of pleistocene bivalves from the Paleobiology Database.
-#'	# DataPBDB<-downloadPBDB(Taxa="Bivalvia","Pleistocene","Pleistocene")
+#' # Download a test dataset of pleistocene bivalves from the Paleobiology Database.
+#' # DataPBDB<-downloadPBDB(Taxa="Bivalvia","Pleistocene","Pleistocene")
 #'
-#'	# Create a community matrix with tectonic plates as "samples".
-#'	# CommunityMatrix<-abundanceMatrix(DataPBDB,"geoplate")
+#' # Create a community matrix with tectonic plates as "samples".
+#' # CommunityMatrix<-abundanceMatrix(DataPBDB,"geoplate")
 #'
-#'	# "True local diversity ratio"
-#'	# multiplicativeBeta(CommunityMatrix)
+#' # "True local diversity ratio"
+#' # multiplicativeBeta(CommunityMatrix)
 #'
-#'	# Whittaker's effective species turnover
-#'	# completeTurnovers(CommunityMatrix)
+#' # Whittaker's effective species turnover
+#' # completeTurnovers(CommunityMatrix)
 #'
-#'	# Proportional effective species turnover
-#'	# notEndemic(CommunityMatrix)
+#' # Proportional effective species turnover
+#' # notEndemic(CommunityMatrix)
 #'
-#'	@rdname multiplicativeBeta
-#'	@export
+#' @rdname multiplicativeBeta
+#' @export
 # returns vector of each taxon’s contribution to alpha diversity
 # "True local diversity ratio" of Tuomisto 2010
 # This quantifies how many times as rich effective species gamma is than alpha
