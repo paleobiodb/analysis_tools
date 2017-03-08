@@ -1,7 +1,7 @@
 Package: velociraptr
 Type: Package
 Title: Fossil Analysis
-Version: 1.0
+Version: 1.10
 Author: Andrew A. Zaffos
 Maintainer: Andrew A Zaffos <azaffos@wisc.edu>
 Description: Functions for downloading, reshaping, culling, cleaning, and analyzing fossil data from the Paleobiology Database <https://paleobiodb.org>.
