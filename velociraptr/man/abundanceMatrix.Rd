@@ -2,7 +2,7 @@
 % Please edit documentation in R/abundanceMatrix.R
 \name{abundanceMatrix}
 \alias{abundanceMatrix}
-\title{Create a community matrix of taxon abundances.}
+\title{Create a community matrix of taxon abundances}
 \usage{
 abundanceMatrix(Data, Rows = "geoplate", Columns = "genus")
 }

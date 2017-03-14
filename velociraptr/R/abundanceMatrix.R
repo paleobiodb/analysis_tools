@@ -1,4 +1,4 @@
-#' Create a community matrix of taxon abundances.
+#' Create a community matrix of taxon abundances
 #'
 #' Creates a community matrix of taxon abundances, with samples as rows and species as columns, from a data frame.
 #'
