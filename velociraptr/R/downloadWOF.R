@@ -31,7 +31,8 @@
 #' @rdname downloadWOF
 #' @export
 # Simple wrapper for the true function
-downloadWOF<-function(Place="Wisconsin",Type="Region") {
+downloadWOF<-function(Place="Wisconsin",Type="region") {
+  Type<-tolower(Type)
   Place<-gsub(" ","%20",Place)
   return(trueWOF(Place,Type))
   }
