@@ -5,7 +5,7 @@
 \alias{trueWOF}
 \title{Download Shapefile of Places}
 \usage{
-downloadWOF(Place = "Wisconsin", Type = "Region")
+downloadWOF(Place = "Wisconsin", Type = "region")
 }
 \arguments{
 \item{Place}{A character string; the name of a place}
