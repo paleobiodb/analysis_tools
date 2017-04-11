@@ -30,7 +30,7 @@ The following is a list of functions included in the package and basic descripti
 + [````totalBeta( )````](#totalbeta-)
 + [````multiplicativeBeta( )````](#multiplicativebeta-)
 + [````completeTurnovers( )````](#completeturnovers-)
-+ [````notEndemic( )`````](#notendemic-)
++ [````notEndemic( )````](#notendemic-)
 + [````totalGamma( )````](#totalgamma-)
 
 ## Confidence Interval Functions
@@ -84,7 +84,7 @@ Calculates the alpha diversity of a community matrix.
 ### taxonBeta( )
 Calculates the contribution to beta diversity of each taxon in a community matrix using the additive diversity partitioning paradigm.
 
-### taxonBeta( )
+### sampleBeta( )
 Calculates the contribution to beta diversity of each sample in a community matrix using the additive diversity partitioning paradigm.
 
 ### totalBeta( )
