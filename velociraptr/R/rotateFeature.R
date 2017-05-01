@@ -37,7 +37,7 @@ rotateFeature<-function(Polygon,Age=0) {
   FileName<-dQuote("shape=<Polygon.geojson")
   AgeInput<-sQuote(paste0("age=",Age))
   QueryA<-paste("cd",RotateFeature,sep=" ")
-  QueryB<-paste("curl -X POST -F",FileName,"-F",AgeInput,"-o Polygon.geojson -- https://dev.macrostrat.org/reconstruct",sep=" ")
+  QueryB<-paste("curl -X POST -F",FileName,"-F",AgeInput,"-F format=geojson_bare -o Polygon.geojson -- https://dev.macrostrat.org/reconstruct",sep=" ")
   FinalQuery<-paste(QueryA,QueryB,sep=" && ")
   system(FinalQuery)
   RotatedFeature<-readOGR(PolygonPath,"OGRGeoJSON")
