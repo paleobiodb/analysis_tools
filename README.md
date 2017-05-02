@@ -1,4 +1,4 @@
-PaleobioDB Utilities
+PBDB Analysis Tools
 =========
 
 A directory of scripts that utilize the Paleobiology Database
