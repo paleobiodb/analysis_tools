@@ -20,18 +20,18 @@
 #' @examples
 #'
 #' # Download a polygon of Dane County, Wisconsin, United States, North America
-#' # DaneCounty<-downloadWOF(Place="Dane",Type="county")
+#' # DaneCounty<-downloadPlaces(Place="Dane",Type="county")
 #'
 #' # Download a polygon of Wisconsin, United States, North America
-#' # Wisconsin<-downloadWOF(Place="Wisconsin",Type="region")
+#' # Wisconsin<-downloadPlaces(Place="Wisconsin",Type="region")
 #'
 #' # Download a polygon of North America
-#' # NorthAmerica<-downloadWOF(Place="North America",Type="continent")
+#' # NorthAmerica<-downloadPlaces(Place="North America",Type="continent")
 #'
-#' @rdname downloadWOF
+#' @rdname downloadPlaces
 #' @export
 # Simple wrapper for the true function
-downloadWOF<-function(Place="Wisconsin",Type="region") {
+downloadPlaces<-function(Place="Wisconsin",Type="region") {
   Type<-tolower(Type)
   Place<-gsub(" ","%20",Place)
   return(trueWOF(Place,Type))
