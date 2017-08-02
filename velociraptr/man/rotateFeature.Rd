@@ -37,4 +37,3 @@ The rotation model used is Wright, N, S. Zahirovic, RD Müller, and M Seton (201
 \author{
 Andrew A. Zaffos
 }
-

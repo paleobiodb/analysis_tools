@@ -41,4 +41,3 @@ These functions originally appeared in the R script appendix of Holland, S.M. an
 \author{
 Andrew A. Zaffos
 }
-

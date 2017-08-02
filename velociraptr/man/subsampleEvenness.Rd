@@ -50,4 +50,3 @@ Alroy, J. (2010) "Fair sampling of taxonomic richness and unbiased estimation of
 \author{
 Andrew A. Zaffos
 }
-

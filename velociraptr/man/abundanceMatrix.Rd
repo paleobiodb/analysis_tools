@@ -34,4 +34,3 @@ Creates a community matrix of taxon abundances, with samples as rows and species
 \author{
 Andrew A. Zaffos
 }
-

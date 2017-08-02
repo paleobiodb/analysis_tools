@@ -45,4 +45,3 @@ Downloads a data frame of Paleobiology Database fossil occurrences matching cert
 \author{
 Andrew A. Zaffos
 }
-

@@ -27,4 +27,3 @@ Timescale<-downloadTime(Timescale="international periods")
 \author{
 Andrew A. Zaffos
 }
-

@@ -42,4 +42,3 @@ Cull a paleobiology database data frame to only occurrences temporally constrain
 \author{
 Andrew A. Zaffos
 }
-

@@ -29,4 +29,3 @@ Downloads a geojson using \code{rgdal::readOGR()} of an equal-area grid with fix
 \author{
 Andrew A. Zaffos
 }
-

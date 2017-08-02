@@ -34,4 +34,3 @@ Creates a community matrix of taxon presences and absences from a data frame wit
 \author{
 Andrew A. Zaffos
 }
-

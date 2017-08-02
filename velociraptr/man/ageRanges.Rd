@@ -32,4 +32,3 @@ Find the age range (first occurrence and last occurrence) for each taxon in a PB
 \author{
 Andrew A. Zaffos
 }
-

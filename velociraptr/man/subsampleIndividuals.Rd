@@ -43,4 +43,3 @@ This is an empirical approach to subsampling a vector of taxonomic abundances to
 \author{
 Andrew A. Zaffos
 }
-

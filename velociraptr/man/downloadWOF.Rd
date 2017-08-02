@@ -38,4 +38,3 @@ If multiple locations of the same type share the same name (e.g., Alexandria), t
 \author{
 Andrew A. Zaffos
 }
-

@@ -34,4 +34,3 @@ Downloads a map of paleocontinents for a specific age from Macrostrat.org as a s
 \author{
 Andrew A. Zaffos
 }
-

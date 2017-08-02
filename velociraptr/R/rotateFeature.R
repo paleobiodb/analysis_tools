@@ -30,14 +30,13 @@
 #' @export
 # This is a jenky function that mostly calls to bash, because I couldn't figure out how to do it with RCurl
 rotateFeature<-function(Polygon,Age=0) {
-  RotateFeature<-tempdir()
-  PolygonPath<-paste0(RotateFeature,"/Polygon.geojson")
+  PolygonPath<-paste0(tempdir(),"/Polygon.geojson")
   rgdal::writeOGR(Polygon,PolygonPath, layer="Polygon", driver="GeoJSON")
   options("useFancyQuotes"=FALSE)
   FileName<-dQuote("shape=<Polygon.geojson")
   AgeInput<-sQuote(paste0("age=",Age))
-  QueryA<-paste("cd",RotateFeature,sep=" ")
-  QueryB<-paste("curl -X POST -F",FileName,"-F",AgeInput,"-F format=geojson_bare -o Polygon.geojson -- https://dev.macrostrat.org/reconstruct",sep=" ")
+  QueryA<-paste("cd",temdir(),sep=" ")
+  QueryB<-paste("curl -X POST -F",FileName,"-F",AgeInput,"-F format=geojson_bare -o Polygon.geojson -- https://macrostrat.org/reconstruct",sep=" ")
   FinalQuery<-paste(QueryA,QueryB,sep=" && ")
   system(FinalQuery)
   RotatedFeature<-readOGR(PolygonPath,"OGRGeoJSON")
