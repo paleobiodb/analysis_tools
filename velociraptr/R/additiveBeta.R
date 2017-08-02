@@ -45,7 +45,8 @@
 #' @export
 # returns vector of each taxon’s contribution to alpha diversity
 taxonAlpha <- function(CommunityMatrix) {
-	Nj <- apply(CommunityMatrix, MARGIN=2, FUN=sum)
+  CommunityMatrix[CommunityMatrix>0]<-1
+  Nj <- apply(CommunityMatrix, 2, sum)
 	Samples <- nrow(CommunityMatrix)
 	Alphaj <- Nj/Samples
 	names(Alphaj) <- colnames(CommunityMatrix)
@@ -63,7 +64,8 @@ meanAlpha <- function (CommunityMatrix) {
 #'	@export
 # returns vector of each taxon’s contribution to beta diversity
 taxonBeta <- function(CommunityMatrix) {
-	Nj <- apply(CommunityMatrix, MARGIN=2, FUN=sum)
+  CommunityMatrix[CommunityMatrix>0]<-1
+	Nj <- apply(CommunityMatrix, 2, sum)
 	Samples <- nrow(CommunityMatrix)
 	Betaj <- (Samples - Nj) / Samples
 	names(Betaj) <- colnames(CommunityMatrix)
@@ -74,8 +76,8 @@ taxonBeta <- function(CommunityMatrix) {
 #'	@export
 # returns vector of each sample’s contribution to beta diversity
 sampleBeta <- function(CommunityMatrix) {
-	Betaj <- taxonBeta(CommunityMatrix)
-	Nj <- apply(CommunityMatrix, MARGIN=2, FUN=sum)
+  Betaj <- taxonBeta(CommunityMatrix)
+	Nj <- apply(CommunityMatrix, 2, sum)
 	NSamples <- nrow(CommunityMatrix)
 	Betai <- vector(mode="numeric", length=NSamples)
 	for (i in 1:NSamples) {
