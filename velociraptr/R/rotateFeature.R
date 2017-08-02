@@ -35,7 +35,7 @@ rotateFeature<-function(Polygon,Age=0) {
   options("useFancyQuotes"=FALSE)
   FileName<-dQuote("shape=<Polygon.geojson")
   AgeInput<-sQuote(paste0("age=",Age))
-  QueryA<-paste("cd",temdir(),sep=" ")
+  QueryA<-paste("cd",tempdir(),sep=" ")
   QueryB<-paste("curl -X POST -F",FileName,"-F",AgeInput,"-F format=geojson_bare -o Polygon.geojson -- https://macrostrat.org/reconstruct",sep=" ")
   FinalQuery<-paste(QueryA,QueryB,sep=" && ")
   system(FinalQuery)
