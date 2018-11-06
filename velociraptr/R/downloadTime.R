@@ -20,9 +20,8 @@
 # Download timescales from Macrostrat
 downloadTime<-function(Timescale="interational epochs") {
 	Timescale<-gsub(" ","%20",Timescale)
-	URL<-paste("https://macrostrat.org/api/defs/intervals?format=csv&timescale=",Timescale,sep="")
-	GotURL<-RCurl::getURL(URL)
-	Intervals<-utils::read.csv(text=GotURL,header=TRUE)
+	URL<-paste0("https://macrostrat.org/api/v2/defs/intervals?format=csv&timescale=",Timescale)
+	Intervals<-utils::read.csv(URL,header=TRUE)
 	Midpoint<-apply(Intervals[,c("t_age","b_age")],1,stats::median)
 	Intervals<-cbind(Intervals,Midpoint)
 	rownames(Intervals)<-Intervals[,"name"]

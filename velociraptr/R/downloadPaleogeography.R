@@ -8,10 +8,7 @@
 #'
 #' @author Andrew A. Zaffos
 #'
-#' @return An rgdal compatible shapefile
-#'
-#' @import RCurl
-#' @import rgdal
+#' @return A simple features object
 #'
 #' @examples
 #'
@@ -29,8 +26,6 @@
 #' @export
 # download maps of paleocontinents from Macrostrat
 downloadPaleogeography<-function(Age=0) {
-	URL<-paste("https://macrostrat.org/api/paleogeography?format=geojson_bare&age=",Age,sep="")
-	GotURL<-RCurl::getURL(URL)
-	Map<-rgdal::readOGR(GotURL,"OGRGeoJSON",verbose=FALSE)
-	return(Map)
+	URL<-paste0("https://macrostrat.org/api/v2/paleogeography?format=geojson_bare&age=",Age)
+	return(sf::st_read(URL))
 	}

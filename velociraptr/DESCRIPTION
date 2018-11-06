@@ -5,8 +5,8 @@ Version: 1.10
 Author: Andrew A. Zaffos
 Maintainer: Andrew A Zaffos <azaffos@wisc.edu>
 Description: Functions for downloading, reshaping, culling, cleaning, and analyzing fossil data from the Paleobiology Database <https://paleobiodb.org>.
+Imports: sf
 License: GPL-3
 Encoding: UTF-8
-Depends: rgdal,RCurl
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0

@@ -4,7 +4,8 @@
 \alias{downloadPBDB}
 \title{Download Occurrences from the Paleobiology Database}
 \usage{
-downloadPBDB(Taxa, StartInterval = "Pliocene", StopInterval = "Pleistocene")
+downloadPBDB(Taxa, StartInterval = "Pliocene",
+  StopInterval = "Pleistocene")
 }
 \arguments{
 \item{Taxa}{a character vector}

@@ -15,8 +15,6 @@
 #'
 #' @author Andrew A. Zaffos
 #'
-#' @import rgdal
-#'
 #' @examples
 #'
 #' # Download a polygon of Dane County, Wisconsin, United States, North America
@@ -34,12 +32,11 @@
 downloadPlaces<-function(Place="Wisconsin",Type="region") {
   Type<-tolower(Type)
   Place<-gsub(" ","%20",Place)
-  return(trueWOF(Place,Type))
+  return(queryPlaces(Place,Type))
   }
 
 # We want to hide the /places route because we do not want people to attempt to download our entire dataset
-trueWOF<-function(Place="Wisconsin",Type="region") {
-  URL<-paste("https://macrostrat.org/api/places?format=geojson_bare&name=",Place,"&placetype=",Type,sep="")
-  Map<-rgdal::readOGR(dsn=URL,"OGRGeoJSON",verbose=FALSE)
-  return(Map)
+queryPlaces<-function(Place="Wisconsin",Type="region") {
+  URL<-paste("https://macrostrat.org/api/v2/places?format=geojson_bare&name=",Place,"&placetype=",Type)
+  return(sf::st_read(URL))
   }

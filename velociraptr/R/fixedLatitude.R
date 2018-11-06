@@ -11,9 +11,6 @@
 #'
 #' @return An rgdal compatible shapefile
 #'
-#' @import RCurl
-#' @import rgdal
-#'
 #' @examples
 #'
 #' # Download an equal area grid with 10 degree latitudinal spacing and 1,000,000 km^2 grids
@@ -25,8 +22,6 @@
 # Fixed latitudinal width in degrees, Target cell size in km2
 # Must pass as character string instead of numeric to avoid R converting to scientific notation
 fixedLatitude<-function(LatSpacing=5,CellArea="500000") {
-  URL<-paste("https://macrostrat.org/api/grids/longitude?format=geojson_bare&latSpacing=",LatSpacing,"&cellArea=",CellArea,sep="")
-  GotURL<-RCurl::getURL(URL)
-  Layer<-rgdal::readOGR(dsn=URL,layer='OGRGeoJSON')
-  return(Layer)
+  URL<-paste0("https://macrostrat.org/api/grids/longitude?format=geojson_bare&latSpacing=",LatSpacing,"&cellArea=",CellArea)
+  return(sf::st_read(URL))
   }
