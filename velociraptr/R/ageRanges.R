@@ -5,7 +5,7 @@
 #' @param Data A data frame downloaded from the paleobiology database API.
 #' @param Taxonomy A characer string identifying the desired level of the taxonomic hierarchy.
 #'
-#' @details \code{rangeDiversity} converts the output of \code{ageRanges} into a vector of range-through richness in million year increments. Note that this function is hard-coded to the default field names from the paleobiology database.
+#' @details Returns a data frame of that states gives the time of origination and extinction for each taxon as numeric values.
 #'
 #' @return A numeric matrix of first and last ages for each taxon, with tax as rownames.
 #'
