@@ -18,7 +18,7 @@ A numeric matrix of first and last ages for each taxon, with tax as rownames.
 Find the age range (first occurrence and last occurrence) for each taxon in a PBDB dataset. Can be run for any level of the taxonomic hierarchy (e.g., family, genus).
 }
 \details{
-\code{rangeDiversity} converts the output of \code{ageRanges} into a vector of range-through richness in million year increments. Note that this function is hard-coded to the default field names from the paleobiology database.
+Returns a data frame of that states gives the time of origination and extinction for each taxon as numeric values. Note that older versions of this function automatically dropped hanging factors and NA's, but that cleaning step should ideally be dictated by the user up-front. So that functionality has been dropped. This may introduce breaking chanes in legacy scripts, but is easily fixed by standard data cleaning steps.
 }
 \examples{
 

@@ -19,6 +19,9 @@ A numeric matrix of taxon abundances. Samples as the rownames and species as the
 \description{
 Creates a community matrix of taxon abundances, with samples as rows and species as columns, from a data frame.
 }
+\details{
+Note that older versions of this function automatically checked for and removed hanging factors. However, this is something that should really be dictated by the user, and that step is no longer a part of the function. This is unlikely to introduce any breaking changes in older scripts, but we note it here for documentation purposes..
+}
 \examples{
 
 # Download a test dataset of pleistocene bivalves.

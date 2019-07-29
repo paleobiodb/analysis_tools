@@ -6,6 +6,8 @@
 #' @param Rows A characer string
 #' @param Columns A character string
 #'
+#' @details Note that older versions of this function automatically checked for and removed hanging factors. However, this is something that should really be dictated by the user, and that step is no longer a part of the function. This is unlikely to introduce any breaking changes in older scripts, but we note it here for documentation purposes..
+#'
 #' @return A numeric matrix of taxon abundances. Samples as the rownames and species as the column names.
 #'
 #' @author Andrew A. Zaffos
@@ -24,7 +26,7 @@
 #' @rdname abundanceMatrix
 #' @export
 abundanceMatrix<-function(Data,Rows="geoplate",Columns="genus") {
-	Data[,Columns]<-as.factor(Data[,Columns]) # Get rid of gross hanging factors
+	# This function previously removed hanging factors, but that is no longer included
 	SamplesAbundances<-by(Data,Data[,Rows],function(x) table(x[,Columns]))
 	FinalMatrix<-sapply(SamplesAbundances,data.matrix)
 	rownames(FinalMatrix)<-sort(unique((Data[,Columns])))
