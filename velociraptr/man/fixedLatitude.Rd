@@ -12,13 +12,13 @@ fixedLatitude(LatSpacing = 5, CellArea = "500000")
 \item{CellArea}{Desired target area of the cells in km^2 as a character string}
 }
 \value{
-An rgdal compatible shapefile
+A simple features object
 }
 \description{
 Download an equal-area grid of the world with fixed latitudinal spacing and variable longitudinal spacing.
 }
 \details{
-Downloads a geojson using \code{rgdal::readOGR()} of an equal-area grid with fixed latitudinal spacing and variable longitudinal spacing. The distance between longitudinal borders of grids will adjust to the target area size within each band of latitude. The algorithm will adjust the area of the grids to ensure that the total surface of the globe is covered.
+Downloads an equal-area grid with fixed latitudinal spacing and variable longitudinal spacing. The distance between longitudinal borders of grids will adjust to the target area size within each band of latitude. The algorithm will adjust the area of the grids to ensure that the total surface of the globe is covered.
 }
 \examples{
 

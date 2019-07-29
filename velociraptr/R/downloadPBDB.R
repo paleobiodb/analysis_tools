@@ -35,7 +35,9 @@
 #' @export
 # A function for downloading data from the Paleobiology database
 downloadPBDB<-function(Taxa,StartInterval="Pliocene",StopInterval="Pleistocene") {
-	Taxa<-paste(Taxa,collapse=",")
+	StartInterval<-gsub(" ","%20",StartInterval)
+	StopInterval<-gsub(" ","%20",StopInterval)
+  Taxa<-paste(Taxa,collapse=",")
 	URL<-paste0("https://paleobiodb.org/data1.2/occs/list.csv?base_name=",Taxa,"&interval=",StartInterval,",",StopInterval,"&show=coords,paleoloc,class&limit=all")
 	File<-utils::read.csv(URL,header=TRUE)
 	# Subset to include the most generically useful columns

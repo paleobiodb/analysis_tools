@@ -5,11 +5,11 @@
 #' @param LatSpacing Number of degrees desired between latitudinal bands
 #' @param CellArea Desired target area of the cells in km^2 as a character string
 #'
-#' @details Downloads a geojson using \code{rgdal::readOGR()} of an equal-area grid with fixed latitudinal spacing and variable longitudinal spacing. The distance between longitudinal borders of grids will adjust to the target area size within each band of latitude. The algorithm will adjust the area of the grids to ensure that the total surface of the globe is covered.
+#' @details Downloads an equal-area grid with fixed latitudinal spacing and variable longitudinal spacing. The distance between longitudinal borders of grids will adjust to the target area size within each band of latitude. The algorithm will adjust the area of the grids to ensure that the total surface of the globe is covered.
 #'
 #' @author Andrew A. Zaffos
 #'
-#' @return An rgdal compatible shapefile
+#' @return A simple features object
 #'
 #' @examples
 #'
