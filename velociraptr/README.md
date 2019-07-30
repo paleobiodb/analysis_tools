@@ -1,12 +1,12 @@
 # velociraptr 1.1
-R Functions for downloading, cleaning, culling, or analyzing fossil data from the Paleobiology Database. Developed and maintained by [Andrew Zaffos](www.azstrata.org) as part of the [Paleobiology Database](https://paleobiodb.org) and [Macrostrat Database](https://macrostrat.org) tech development initiatives at the University of Wisconsin - Madison.
+R Functions for downloading, cleaning, culling, or analyzing fossil data from the Paleobiology Database. Developed and maintained by [Andrew Zaffos](http://www.azstrata.org) as part of the [Paleobiology Database](https://paleobiodb.org) and [Macrostrat Database](https://macrostrat.org) tech development initiatives at the University of Wisconsin - Madison.
 
 ## Changes in 1.1
 ### Several of the dependency functions have changed. 
 
-1. [RCurl](https://cran.r-project.org/web/packages/RCurl/index.html) dependency has been dropped thanks to changes in how base handles
+1. [RCurl](https://CRAN.R-project.org/package=RCurl) dependency has been dropped thanks to changes in how base handles
 https
-2. [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html) has been replaced with [sf](https://github.com/r-spatial/sf)
+2. [rgdal](https://CRAN.R-project.org/package=rgdal) has been replaced with [sf](https://github.com/r-spatial/sf)
 
 ### Several functions have been removed because they can be found in other packages.
 
