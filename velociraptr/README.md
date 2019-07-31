@@ -1,7 +1,7 @@
-# velociraptr 1.1
+# velociraptr 1.1.0
 R Functions for downloading, cleaning, culling, or analyzing fossil data from the Paleobiology Database. Developed and maintained by [Andrew Zaffos](http://www.azstrata.org) as part of the [Paleobiology Database](https://paleobiodb.org) and [Macrostrat Database](https://macrostrat.org) tech development initiatives at the University of Wisconsin - Madison.
 
-## Changes in 1.1
+## Changes in 1.1.0
 ### Several of the dependency functions have changed. 
 
 1. [RCurl](https://CRAN.R-project.org/package=RCurl) dependency has been dropped thanks to changes in how base handles
