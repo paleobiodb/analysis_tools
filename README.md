@@ -38,7 +38,18 @@ Simply submit a pull request to this repo following the instructions below:
 <a name="scripts"></a>
 ## Scripts
 If you would like to add your script to this list, please refer to [submitting a script](#submissions) above. As more scripts are added, it may become necessary to organize by language or purpose.
- 
+
+```{r}
+# Simple example to identify possibly problematic homonym genera (or duplicates
+# or multiple listings of a genus, as occurs when there are subgenera)
+which.gsg <- 
+  which((pbdb$accepted_rank == "genus" | pbdb$accepted_rank == "subgenus") 
+        & pbdb$difference == "")
+sort(table(pbdb$accepted_name[which.gsg]), decreasing = TRUE)[1:20]
+# Example (as of 9/1/2019, includes a homonym and likely duplicate entry):
+pbdb[which(pbdb$accepted_name == "Lowenstamia"), ]
+```
+
 =========
 ### rOpenSci 
 **Description**:  R interface to the Paleobiology Database API   
@@ -52,6 +63,12 @@ If you would like to add your script to this list, please refer to [submitting a
 **Language**: R  
 **Author**: Matthew Clapham  
 **Code**: https://github.com/mclapham/PBDB-R-scripts
+
+#### Phil Novack-Gottshall's PBDB R scripts
+**Description**:  Various R scripts that utilize the Paleobiology Database, including one to create a compact taxonomic structure and to check for homonyms or problematic duplicate genera   
+**Language**: R  
+**Author**: Phil Novack-Gottshall  
+**Code**: https://github.com/pnovack-gottshall/PBDB-R-scripts
 
 
 
