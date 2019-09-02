@@ -43,6 +43,8 @@ If you would like to add your script to this list, please refer to [submitting a
 # Simple example to identify possibly problematic homonym genera (or duplicates
 # or multiple listings of a genus, as occurs when there are subgenera) (written 
 # by Phil Novack-Gottshall <pnovack-gottshall@ben.edu> 
+pbdb <- read.csv("www.paleobiodb.org/data1.2/taxa/list.csv?base_name=Metazoa&show=app&vocab=pbdb")
+# Big download! If errors, copy the URL directly into browser and save csv to working directory
 which.gsg <- 
   which((pbdb$accepted_rank == "genus" | pbdb$accepted_rank == "subgenus") 
         & pbdb$difference == "")
