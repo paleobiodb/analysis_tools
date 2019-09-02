@@ -23,7 +23,7 @@ If you are unfamiliar with using Git for version control, these are some good re
 Simply submit a pull request to this repo following the instructions below:
 
 1. Click "Fork" in upper right corner of this page
-2. You should now be at http://github.com/your_user_name/utilities. In the bottom right, copy the ````clone URL```` URL, and on your local machine open Terminal and type this, substituting your username for the placeholder:  ````git clone https://github.com/your_user_name/paleobiodb_utilities.git````
+2. You should now be at http://github.com/your_user_name/utilities. In the bottom right, copy the ````clone URL```` URL, and on your local machine open Terminal and type this, substituting your username for the placeholder:  ````git clone https://github.com/your_user_name/analysis_tools.git````
 3. You now have a copy of this repository on your local machine. You can now open this file (````README.md````) and add your script. When you are done, save your changes.
 4. Making sure you are in the correct directory, add, commit, and push your changes:
 
@@ -32,7 +32,7 @@ Simply submit a pull request to this repo following the instructions below:
 	git commit -m "Added my script to the list"
 	git push
 	````
-5. Go to https://github.com/your_user_name/paleobiodb_utilities/pulls and click "New pull request", and then "Create Pull Request". Write a note explaining the changes you made and click "Send pull request"! Once we get a chance to review your changes, they will show up on the list.
+5. Go to https://github.com/your_user_name/analysis_tools/pulls and click "New pull request", and then "Create Pull Request". Write a note explaining the changes you made and click "Send pull request"! Once we get a chance to review your changes, they will show up on the list.
 
 
 <a name="scripts"></a>
