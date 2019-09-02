@@ -41,7 +41,8 @@ If you would like to add your script to this list, please refer to [submitting a
 
 ```{r}
 # Simple example to identify possibly problematic homonym genera (or duplicates
-# or multiple listings of a genus, as occurs when there are subgenera)
+# or multiple listings of a genus, as occurs when there are subgenera) (written 
+# by Phil Novack-Gottshall <pnovack-gottshall@ben.edu> 
 which.gsg <- 
   which((pbdb$accepted_rank == "genus" | pbdb$accepted_rank == "subgenus") 
         & pbdb$difference == "")
